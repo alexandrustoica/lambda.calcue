@@ -1,4 +1,7 @@
 declare
+functor FreeVarsModule
+export FreeSet
+define
 
 fun {FreeVars Expression FreeVariables}
    case Expression of nil then FreeVariables
@@ -19,4 +22,4 @@ fun {FreeSet Expression}
    {TakeUnique {FreeVars Expression nil} nil}
 end
 
-{Browse {FreeSet apply(y apply(let(x#x x) y))}}
+end
