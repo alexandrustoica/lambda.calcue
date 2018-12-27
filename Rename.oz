@@ -39,15 +39,11 @@ fun {Refactor Expression FreeVars}
    end
 end
 
-
 fun {Rename Expression}
    local M in
       [M] = {Module.apply [FreeVarsModule]}
-      {Browse {M.freeSet Expression}}
       {Refactor Expression {M.freeSet Expression}}
    end
 end
 
-{Browse {Rename let(id#lam(z z) apply(id y))}}
-
-
+{Browse {Rename lam(z lam(x z))}}
