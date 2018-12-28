@@ -1,4 +1,9 @@
 declare
+functor RenameModule
+export
+   replaceIn:ReplaceIn
+   rename:Rename
+define
 
 Generator = {NewCell 0}
 fun {NewId}
@@ -46,4 +51,4 @@ fun {Rename Expression}
    end
 end
 
-{Browse {Rename lam(z lam(x z))}}
+end
