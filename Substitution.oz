@@ -1,4 +1,8 @@
 declare
+functor Substitute
+export
+   substitute:Substitute
+define
 
 fun {Substitute Binding InExpression}
    local Rename in
@@ -10,4 +14,4 @@ fun {Substitute Binding InExpression}
    end
 end
 
-{Browse {Substitute x#lam(y z) apply(x lam(z apply(x z))) }}
+end

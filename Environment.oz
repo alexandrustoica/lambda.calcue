@@ -17,12 +17,6 @@ end
 
 fun {Adjoin Environment Binding}
    Binding | {List.filter Environment fun {$ Item} {Not Item.1 == Binding.1} end}
-end
 
-local Env in
-   Env = {Adjoin [y#lam(x x) z#let(x#y x)] x#apply(x y)}
-   {Browse {Fetch Env x}}
-   {Browse Env}
-   {Browse {IsMember Env x}}
 end
 
