@@ -5,11 +5,11 @@ export
 define
 
 fun {Substitute Binding InExpression}
-   local Rename in
-      [Rename] = {Module.apply [RenameModule]}
+   local R in
+      [R] = {Module.apply [Rename]}
       case Binding of nil then nil
-      [] Id#Expression then {Rename.replaceIn
-          {Rename.rename InExpression} Id Expression}
+      [] Id#Expression then
+         {R.replaceIn {R.rename InExpression} Id Expression}
       end
    end
 end

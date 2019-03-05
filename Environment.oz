@@ -17,6 +17,5 @@ end
 
 fun {Adjoin Environment Binding}
    Binding | {List.filter Environment fun {$ Item} {Not Item.1 == Binding.1} end}
-
 end
 

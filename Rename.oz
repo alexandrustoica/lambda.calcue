@@ -1,5 +1,5 @@
 declare
-functor RenameModule
+functor Rename
 export
    replaceIn:ReplaceIn
    rename:Rename
@@ -45,9 +45,9 @@ fun {Refactor Expression FreeVars}
 end
 
 fun {Rename Expression}
-   local M in
-      [M] = {Module.apply [FreeVarsModule]}
-      {Refactor Expression {M.freeSet Expression}}
+   local Free in
+      [Free] = {Module.apply [Free]}
+      {Refactor Expression {Free.variables Expression}}
    end
 end
 
