@@ -1,6 +1,5 @@
-declare
-functor FreeVarsModule
-export FreeSet
+declare functor Free export
+   variables:FreeSet
 define
 
 fun {FreeVars Expression FreeVariables}
